@@ -1,36 +1,36 @@
 export default [
-  "strapi::logger",
-  "strapi::errors",
+  'strapi::errors',
   {
-    name: "strapi::security",
+    name: 'strapi::security',
     config: {
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          // чтобы работали превью/иконки/видео с Cloudinary
-          "img-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
-          "media-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
-          // на всякий случай
-          "connect-src": ["'self'", "https:", "http:"],
+          'img-src':   ["'self'", 'data:', 'blob:', 'https://res.cloudinary.com'],
+          'media-src': ["'self'", 'data:', 'blob:', 'https://res.cloudinary.com'],
+          'connect-src': ["'self'", 'https:'],
         },
       },
     },
   },
   {
-    name: "strapi::cors",
+    name: 'strapi::cors',
     config: {
-      origin: ["https://ittcon.vercel.app/"], // адрес твоего Next.js
-      headers: "*",
-      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
-      keepHeaderOnError: true,
+      enabled: true,
+      origin: ['https://ittcon.vercel.app', 'http://localhost:3000'],
+      methods: ['GET','POST','PUT','PATCH','DELETE','HEAD','OPTIONS'],
+      headers: [
+        'Content-Type','Authorization','Origin','Accept',
+        'Keep-Alive','User-Agent','If-Modified-Since','Cache-Control'
+      ],
+      credentials: true,
     },
   },
-  "strapi::security",
-  "strapi::cors",
-  "strapi::poweredBy",
-  "strapi::query",
-  "strapi::body",
-  "strapi::session",
-  "strapi::favicon",
-  "strapi::public",
+  'strapi::poweredBy',
+  'strapi::logger',
+  'strapi::query',
+  'strapi::body',
+  'strapi::session',
+  'strapi::favicon',
+  'strapi::public',
 ];
