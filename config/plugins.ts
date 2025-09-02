@@ -1,15 +1,16 @@
+// config/plugins.ts
 export default ({ env }) => ({
-  email: {
+  upload: {
     config: {
-      provider: 'nodemailer',
+      provider: "@strapi/provider-upload-cloudinary",
       providerOptions: {
-        host: env('SMTP_HOST', 'smtp.gmail.com'),
-        port: env.int('SMTP_PORT', 587),
-        auth: { user: env('SMTP_USER'), pass: env('SMTP_PASS') },
+        cloud_name: env("CLOUDINARY_CLOUD_NAME"),
+        api_key: env("CLOUDINARY_API_KEY"),
+        api_secret: env("CLOUDINARY_API_SECRET"),
       },
-      settings: {
-        defaultFrom: env('EMAIL_FROM', 'noreply@yourdomain.com'),
-        defaultReplyTo: env('EMAIL_REPLY', 'support@yourdomain.com'),
+      actionOptions: {
+        upload: {}, // можно задать folder/overwrite/public_id при желании
+        delete: {},
       },
     },
   },
