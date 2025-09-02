@@ -19,7 +19,7 @@ export interface SectionsAbout extends Struct.ComponentSchema {
       Schema.Attribute.Required;
     stats: Schema.Attribute.Component<'ui.stat', true>;
     subtitle: Schema.Attribute.String & Schema.Attribute.Required;
-    text: Schema.Attribute.String & Schema.Attribute.Required;
+    text: Schema.Attribute.Text & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }

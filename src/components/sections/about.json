@@ -14,7 +14,7 @@
       "required": true
     },
     "text": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "stats": {
