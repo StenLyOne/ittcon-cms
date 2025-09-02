@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sections_solutions",
+  "info": {
+    "displayName": "solutions"
+  },
+  "options": {},
+  "attributes": {
+    "sections": {
+      "type": "component",
+      "component": "ui.service-tiles",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

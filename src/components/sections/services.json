@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_sections_services",
+  "info": {
+    "displayName": "services"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "cards": {
+      "type": "component",
+      "component": "ui.sard-sategory",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

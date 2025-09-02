@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_ui_service_tiles",
+  "info": {
+    "displayName": "card-tiles"
+  },
+  "options": {},
+  "attributes": {
+    "is_full_width": {
+      "type": "boolean",
+      "required": true
+    },
+    "is_image": {
+      "type": "boolean",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "ui.button",
+      "repeatable": false,
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "is_image"
+            },
+            true
+          ]
+        }
+      },
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

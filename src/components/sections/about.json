@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_sections_abouts",
+  "info": {
+    "displayName": "about"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "stats": {
+      "type": "component",
+      "component": "ui.stat",
+      "repeatable": true
+    },
+    "ctas": {
+      "type": "component",
+      "component": "ui.button",
+      "repeatable": true,
+      "required": true,
+      "min": 1,
+      "max": 2
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,64 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.hero-section",
+      "repeatable": false,
+      "required": true,
+      "max": 0
+    },
+    "about": {
+      "type": "component",
+      "component": "sections.about",
+      "repeatable": false,
+      "required": true,
+      "min": 1,
+      "max": 1
+    },
+    "services": {
+      "type": "component",
+      "component": "sections.services",
+      "repeatable": false,
+      "required": true
+    },
+    "solutions": {
+      "type": "component",
+      "component": "ui.service-tiles",
+      "repeatable": true,
+      "required": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "sections.cta",
+      "repeatable": false,
+      "required": true
+    },
+    "choose": {
+      "type": "component",
+      "component": "sections.choose",
+      "repeatable": false,
+      "required": true
+    },
+    "faq": {
+      "type": "component",
+      "component": "sections.frequently-asked-questions",
+      "repeatable": false
+    },
+    "partners": {
+      "type": "component",
+      "component": "sections.partners",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_ui_buttons",
+  "info": {
+    "displayName": "button"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    },
+    "variant": {
+      "type": "enumeration",
+      "required": true,
+      "default": "default",
+      "enum": [
+        "default",
+        "arrow",
+        "border"
+      ]
+    },
+    "color": {
+      "type": "enumeration",
+      "required": true,
+      "default": "white",
+      "enum": [
+        "white",
+        "blue"
+      ]
+    }
+  },
+  "config": {}
+}

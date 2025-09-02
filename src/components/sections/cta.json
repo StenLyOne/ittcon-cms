@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_sections_ctas",
+  "info": {
+    "displayName": "cta"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "cta": {
+      "type": "component",
+      "component": "ui.button",
+      "repeatable": false,
+      "required": true
+    }
+  },
+  "config": {}
+}
