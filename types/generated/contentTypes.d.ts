@@ -511,6 +511,8 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     partners: Schema.Attribute.Component<'sections.partners', false>;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.Required;
     services: Schema.Attribute.Component<'sections.services', false> &
       Schema.Attribute.Required;
     solutions: Schema.Attribute.Component<'ui.service-tiles', true> &

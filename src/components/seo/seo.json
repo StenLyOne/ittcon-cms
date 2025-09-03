@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_seo_seos",
+  "info": {
+    "displayName": "seo"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string",
+      "maxLength": 70,
+      "required": true
+    },
+    "metaDescription": {
+      "type": "text",
+      "maxLength": 160,
+      "required": true
+    },
+    "keywords": {
+      "type": "text",
+      "required": true
+    },
+    "metaImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "metaSocial": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}

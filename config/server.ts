@@ -5,7 +5,4 @@ export default ({ env }) => ({
     keys: env.array("APP_KEYS"),
   },
   url: env("PUBLIC_URL"),
-  transfer: {
-    remote: { enabled: true }, // включает удалённый transfer
-  },
 });

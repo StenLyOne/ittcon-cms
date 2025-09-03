@@ -134,6 +134,29 @@ export interface SectionsSolutions extends Struct.ComponentSchema {
   };
 }
 
+export interface SeoSeo extends Struct.ComponentSchema {
+  collectionName: 'components_seo_seos';
+  info: {
+    displayName: 'seo';
+  };
+  attributes: {
+    keywords: Schema.Attribute.Text & Schema.Attribute.Required;
+    metaDescription: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 160;
+      }>;
+    metaImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    metaSocial: Schema.Attribute.JSON;
+    metaTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 70;
+      }>;
+  };
+}
+
 export interface UiButton extends Struct.ComponentSchema {
   collectionName: 'components_ui_buttons';
   info: {
@@ -237,6 +260,7 @@ declare module '@strapi/strapi' {
       'sections.partners': SectionsPartners;
       'sections.services': SectionsServices;
       'sections.solutions': SectionsSolutions;
+      'seo.seo': SeoSeo;
       'ui.button': UiButton;
       'ui.faq': UiFaq;
       'ui.image': UiImage;

@@ -59,6 +59,12 @@
       "type": "component",
       "component": "sections.frequently-asked-questions",
       "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false,
+      "required": true
     }
   }
 }
